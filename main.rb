@@ -11,7 +11,7 @@ post '/payload' do
   # Query for the username that sent the webhook
   username = json["repository"]["owner"]["login"]
   # Clone the repository into a subdirectory
-  #system "git clone #{repo_url}"
+  # system "git clone #{repo_url}"
   # Initialize a new subdirectory with the scraped username 
   system "git clone subdir-#{username}"
   
