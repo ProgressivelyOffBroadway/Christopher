@@ -8,11 +8,9 @@ post '/payload' do
   json = JSON.parse( request.body.read )
   # Query for the URL of the repo that sent the webhook
   repo_url =  json["repository"]["html_url"]
-  # Query for the username that sent the webhook
-  username = json["repository"]["owner"]["login"]
-  # Clone the repository into a subdirectory
-  # system "git clone #{repo_url}"
+  # Query for the username/repo_name that sent the webhook
+  full_name = json["repository"]["full_name"]
   # Initialize a new subdirectory with the scraped username 
-  system "git clone subdir-#{username}"
+  system "git clone #{repo_url} subdir-#{full_name}"
   
 end
