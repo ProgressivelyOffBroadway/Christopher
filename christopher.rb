@@ -90,6 +90,8 @@ end
 
 # Main payload for the time being
 post '/push' do
+
+  "You pushed!"
   
   data = designated_API( request )
     
