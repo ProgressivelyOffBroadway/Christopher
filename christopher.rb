@@ -1,13 +1,13 @@
 require 'sinatra'
 require 'json'
-  
+# Todo: testing other todos  
 get '/' do
   "Hello world!"
 end
 
 get '/push' do
   "Hey Hoyle!"
-end
+end # again Todo: again testing the todos
 
 ### Design Considerations ###
 #
