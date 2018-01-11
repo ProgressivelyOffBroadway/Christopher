@@ -1,0 +1,27 @@
+GEM
+  specs:
+    mustermann (1.0.1)
+    passenger (5.1.12)
+      rack
+      rake (>= 0.8.1)
+    rack (2.0.3)
+    rack-protection (2.0.0)
+      rack
+    rake (12.3.0)
+    sinatra (2.0.0)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0)
+      tilt (~> 2.0)
+    tilt (2.0.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler
+  passenger
+  sinatra
+
+BUNDLED WITH
+   1.16.0

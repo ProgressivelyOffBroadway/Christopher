@@ -1,4 +1,4 @@
-require 'sinatra'
+0;95;0crequire 'sinatra'
 require 'json'
 
 # Main payload for the time being
