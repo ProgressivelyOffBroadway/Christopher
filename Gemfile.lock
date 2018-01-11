@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     mustermann (1.0.1)
     passenger (5.1.12)
@@ -24,4 +25,4 @@ DEPENDENCIES
   sinatra
 
 BUNDLED WITH
-   1.16.0
+   1.16.1
