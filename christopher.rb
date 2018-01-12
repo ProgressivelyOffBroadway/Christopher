@@ -28,6 +28,7 @@ end
 ### Function Declarations
 # Strip a Gitlab API payload
 def gitlab_strip( body )
+  
   json_rep = JSON.parse( body.read )
 
   # Get commit count for indexing purposes
@@ -47,6 +48,7 @@ end
 
 # Strip a Github API payload
 def github_strip( body )
+  
   json_rep = JSON.parse( body.read )
 
   # Isolate owner data for readability
@@ -61,11 +63,13 @@ def github_strip( body )
   
   # Return the data
   return data
+
 end
 
 # Designate the API and return an array containing important information
 # TODO: find a more elegant way to deal with this issue of differentiation
-def designated_API( request )
+# TODO: establish a routing protocol for events other than the "push event"
+def normalize( request )
 
   # Check whether the header passed in is a gitlab or github header
   gitlab_status = request.env["HTTP_X_GITLAB_EVENT"]
@@ -87,15 +91,21 @@ def designated_API( request )
 
 end
 
-
 # Main payload for the time being
 post '/push' do
+
+  # Normalize the data in a symbol-indexed array
+  data = normalize( request )
+
+  # Check on whether the normalized data is valid
+  if data.empty?
+    halt 433, 'Unsupported API source. Supported APIs include Github and Gitlab push events.'
+  end
   
-  data = designated_API( request )
-    
   # Initialize a new subdirectory with the scraped username 
   system "git clone \"#{data[:repo_url]}\" \"subdir-#{data[:user_name]}\""
- 
+
+  # 
   
 end
 
