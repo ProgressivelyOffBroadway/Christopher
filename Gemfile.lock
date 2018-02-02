@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     mustermann (1.0.1)
+    parslet (1.8.1)
     passenger (5.1.12)
       rack
       rake (>= 0.8.1)
@@ -15,14 +16,17 @@ GEM
       rack-protection (= 2.0.0)
       tilt (~> 2.0)
     tilt (2.0.8)
+    toml (0.2.0)
+      parslet (~> 1.8.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
-  passenger
-  sinatra
+  bundler!
+  passenger!
+  sinatra!
+  toml!
 
 BUNDLED WITH
    1.16.1
