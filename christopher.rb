@@ -3,7 +3,7 @@ require 'sinatra/base'
 require 'json'
 require 'logger'
 
-class Christopher < Sinatra::Base
+#class Christopher < Sinatra::Base
 
   # Logging
   ::Logger.class_eval { alias :write :'<<' }
@@ -132,4 +132,4 @@ class Christopher < Sinatra::Base
     
   end
 
-end
+#end
