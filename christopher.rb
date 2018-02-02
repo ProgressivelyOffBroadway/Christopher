@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'json'
 
-#class Christopher < Sinatra::Base
+class Christopher < Sinatra::Application
 
   get '/' do
     "Hello world!"
@@ -61,8 +61,8 @@ require 'json'
       :repo_url => json_rep["repository"]["html_url"],
       :user_name => owner["name"],
       :user_email => owner["email"],
-      :message => json_rep["head_commit"]["message"]
-      #:assignment => /hw.?/.match(json_rep["repository"]["name"])
+      :message => json_rep["head_commit"]["message"],
+      :assignment => /hw.?/.match(json_rep["repository"]["name"])
     }
     
     # Return the data
@@ -107,10 +107,10 @@ require 'json'
     end
     
     # Initialize a new subdirectory with the scraped username 
-    system "git clone \"#{data[:repo_url]}\" \"subdir-#{data[:user-name]}\""
+    system "git clone \"#{data[:repo_url]}\" \"subdir-#{data[:user_name]}\""
 
-    #system "echo \'#{data[:assignment]}\' > assignment.txt"
+    system "echo \'#{data[:assignment]}\' > assignment.txt"
     
   end
 
-#end
+end
