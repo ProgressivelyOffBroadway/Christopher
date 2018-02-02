@@ -59,8 +59,8 @@ require 'json'
       :repo_url => json_rep["repository"]["html_url"],
       :user_name => owner["name"],
       :user_email => owner["email"],
-      :message => json_rep["head_commit"]["message"],
-      :assignment => /hw.?/.match(json_rep["repository"]["name"])
+      :message => json_rep["head_commit"]["message"]
+      #:assignment => /hw.?/.match(json_rep["repository"]["name"])
     }
     
     # Return the data
