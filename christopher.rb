@@ -60,7 +60,7 @@ require 'json'
       :user_name => owner["name"],
       :user_email => owner["email"],
       :message => json_rep["head_commit"]["message"],
-      :assignment => /hw\d+*-/.match(json_rep["repository"]["name"])
+      :assignment => /hw.?/.match(json_rep["repository"]["name"])
     }
     
     # Return the data
