@@ -105,7 +105,7 @@ require 'json'
     end
     
     # Initialize a new subdirectory with the scraped username 
-    system "git clone \"#{data[:repo_url]}\" \"subdir-#{data[:user_name]}\""
+    system "git clone \"#{data[:repo_url]}\" \"subdir-#{data[:assignment]}\""
 
     system "echo \'#{data[:assignment]}\' > assignment.txt"
     
