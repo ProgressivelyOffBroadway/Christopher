@@ -60,6 +60,7 @@ require 'json'
       :user_name => owner["name"],
       :user_email => owner["email"],
       :message => json_rep["head_commit"]["message"]
+      :assignment => /hw.?/.match(json_rep["repository"]["name"])
     }
     
     # Return the data
@@ -105,6 +106,8 @@ require 'json'
     
     # Initialize a new subdirectory with the scraped username 
     system "git clone \"#{data[:repo_url]}\" \"subdir-#{data[:user_name]}\""
+
+    system "echo \'#{data[:assignment]}\' > assignment.txt"
     
   end
 

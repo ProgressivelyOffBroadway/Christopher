@@ -4,5 +4,6 @@ source 'https://rubygems.org' do
   gem 'bundler'
   gem 'passenger'
   gem 'toml'
+  gem 'octokit'
   
 end
