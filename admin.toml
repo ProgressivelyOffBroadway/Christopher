@@ -1,0 +1,17 @@
+# This is the admin test file
+
+# Put permanent tests under this section (e.g. valgrind, specific compilation flags, etc.)
+[permanent]
+# testReg = "exampleReg" # Uncomment this to add a regex for finding tests
+testDir = "bunker/permanent-tests" # Using this directory to house the permanent tests
+# testFile = "exampleFile" # Ucomment this to designate a specific file at the root of the bunker
+
+# Use TOML folders to house Lab specific tests
+[hw1] # example for hw1
+testReg = "tests/hw1-*" # Use a directory to separate tests into discrete goals (e.g. 3 tests passed out of 5)
+# testDir = "exampleDir" # Uncomment this to designate an entire directory to tests for this homework
+# testFile = "exampleFile" # Uncomment this to designate a specific file at the root of the homework directory
+
+
+
+

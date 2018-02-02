@@ -1,15 +1,27 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
+    faraday (0.14.0)
+      multipart-post (>= 1.2, < 3)
+    logger (1.2.8)
+    multipart-post (2.0.0)
     mustermann (1.0.1)
+    octokit (4.8.0)
+      sawyer (~> 0.8.0, >= 0.5.3)
     parslet (1.8.1)
     passenger (5.1.12)
       rack
       rake (>= 0.8.1)
+    public_suffix (3.0.1)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
     rake (12.3.0)
+    sawyer (0.8.1)
+      addressable (>= 2.3.5, < 2.6)
+      faraday (~> 0.8, < 1.0)
     sinatra (2.0.0)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -24,6 +36,8 @@ PLATFORMS
 
 DEPENDENCIES
   bundler!
+  logger!
+  octokit!
   passenger!
   sinatra!
   toml!
