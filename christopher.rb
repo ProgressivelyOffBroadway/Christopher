@@ -1,7 +1,7 @@
 require 'sinatra/base'
 require 'json'
 
-class Christopher < Sinatra::Base
+#class Christopher < Sinatra::Base
   get '/' do
     "Hello world!"
   end
@@ -108,4 +108,4 @@ class Christopher < Sinatra::Base
     
   end
 
-end
+#end
