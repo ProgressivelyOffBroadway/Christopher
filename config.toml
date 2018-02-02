@@ -1,0 +1,6 @@
+# This is an example configuration file for the Christopher CI
+
+# All configurations pertaining to tests go below
+[tests]
+testDir = "exampleDir" # Directory containing custom tests
+
